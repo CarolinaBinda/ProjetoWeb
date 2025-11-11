@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetLindo - PetShop</title>
+  <style>
+    :root{--accent:#f9db4a;--muted:#d3a007;--card:#ffffff;--bg:#f7fafc}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#b88900}
+    header{background:linear-gradient(90deg,#ffffff88, #f9db4a);border-bottom:1px solid #e6e6e6}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+    nav{margin-left:auto}
+    nav a{margin:0 10px;color:var(--muted);text-decoration:none;font-weight:600}
+    header .top{display:flex;align-items:center}
+
+    main{padding:28px 0}
+    h1,h2{margin:0 0 12px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+    .category{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .category h3{margin:0 0 10px 0}
+    .products{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .card{background:#fff;border-radius:10px;padding:10px;display:flex;gap:10px;align-items:center;border:1px solid #eef2f7}
+    .card img{width:70px;height:70px;border-radius:8px;object-fit:cover}
+    .card .info{flex:1}
+    .price{font-weight:700;color:var(--accent)}
+
+    .services{display:grid;grid-template-columns:1fr;gap:10px}
+    .service{background:#fff;padding:12px;border-radius:10px;border:1px solid #eef2f7;display:flex;justify-content:space-between;align-items:center}
+    .service .meta{color:var(--muted)}
+
+    footer{background:#efb810;color:#b57c00;padding:20px 0;margin-top:26px}
+    footer .foot-inner{max-width:1100px;margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
+    footer a{color:#bfdbfe;text-decoration:none}
+
+    /* small search bar and responsiveness */
+    .search-row{display:flex;gap:10px;margin-bottom:14px}
+    .search-row input{flex:1;padding:10px;border-radius:8px;border:1px solid #d1d5db}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+
+    @media (max-width:640px){.products{grid-template-columns:1fr}.brand img{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container top">
+      <div class="brand">
+        <img src="C:\Users\arist\Downloads\cachorrinho.jpg" alt="logo PetLindo">
+        <div>
+          <strong>PetLindo</strong>
+          <div style="font-size:13px;color:var(--muted)">Seu pet mais feliz — loja & serviços</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section>
+      <h1>Bem‑vindo ao PetLindo</h1>
+      <p style="color:var(--muted)">Aqui você encontra produtos de qualidade e os melhores serviços para seu pet!.</p>
+    </section>
+
+    <section id="produtos" style="margin-top:22px">
+      <h2>Produtos</h2>
+      <div class="grid">
+        <!-- Categoria 1: Alimentação -->
+        <article class="category">
+          <h3>Alimentação</h3>
+          <div class="products">
+            <div class="card">
+              <img src="https://via.placeholder.com/160x160?text=Ração+Cães" alt="ração para cães">
+              <div class="info">
+                <div><strong>Ração Premium SuperDog 15kg</strong></div>
+                <div style="font-size:13px;color:var(--muted)">Fórmula balanceada para energia e pelagem saudável.</div>
+                <div class="price">R$ 189,90</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="https://via.placeholder.com/160x160?text=Ração+Gatos" alt="ração para gatos">
+              <div class="info">
+                <div><strong>Ração MiaGato 5kg</strong></div>
+                <div style="font-size:13px;color:var(--muted)">Controle de bolas de pelo e nutrientes essenciais.</div>
+                <div class="price">R$ 89,50</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Categoria 2: Higiene -->
+        <article class="category">
+          <h3>Higiene</h3>
+          <div class="products">
+            <div class="card">
+              <img src="https://via.placeholder.com/160x160?text=Shampoo" alt="shampoo pet">
+              <div class="info">
+                <div><strong>Shampoo Suave 250ml</strong></div>
+                <div style="font-size:13px;color:var(--muted)">Hipoalergênico, ideal para peles sensíveis.</div>
+                <div class="price">R$ 29,90</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="https://via.placeholder.com/160x160?text=Escova" alt="escova pet">
+              <div class="info">
+                <div><strong>Escova PegaPelos</strong></div>
+                <div style="font-size:13px;color:var(--muted)">Remove pelos soltos e desembaraça sem puxar.</div>
+                <div class="price">R$ 45,00</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Categoria 3: Brinquedos -->
+        <article class="category">
+          <h3>Brinquedos</h3>
+          <div class="products">
+            <div class="card">
+              <img src="https://via.placeholder.com/160x160?text=Bola" alt="bola para cães">
+              <div class="info">
+                <div><strong>Bolinha Azul Mordedora</strong></div>
+                <div style="font-size:13px;color:var(--muted)">Borracha resistente para brincadeiras ao ar livre.</div>
+                <div class="price">R$ 24,90</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="https://via.placeholder.com/160x160?text=Arranhador" alt="arranhador para gatos">
+              <div class="info">
+                <div><strong>Arranhador Torre</strong></div>
+                <div style="font-size:13px;color:var(--muted)">Torre compacta com plataforma e brinquedo pendente.</div>
+                <div class="price">R$ 129,00</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="servicos" style="margin-top:30px">
+      <h2>Serviços</h2>
+
+      <div class="search-row">
+        <input id="serviceSearch" placeholder="Buscar serviços (ex: banho, tosa, hospedagem)..." />
+        <button class="btn" onclick="filterServices()">Pesquisar</button>
+      </div>
+
+      <div id="servicesList" class="services">
+        <div class="service" data-name="Banho e Tosa">
+          <div>
+            <strong>Banho e Tosa Completo</strong>
+            <div class="meta">Banho com produtos dermatológicos + tosa higiênica. Duração média: 1h30.</div>
+            <div class="meta">Tele‑busca: Sim</div>
+          </div>
+          <div style="text-align:right">
+            <div class="price">R$ 89,00</div>
+            <div style="font-size:12px;color:var(--muted)">Agende pelo telefone</div>
+          </div>
+        </div>
+
+        <div class="service" data-name="Hospedagem">
+          <div>
+            <strong>Hospedagem Familiar</strong>
+            <div class="meta">Acomodações individuais com supervisão. Alimentação inclusa.</div>
+            <div class="meta">Tele‑busca: Não</div>
+          </div>
+          <div style="text-align:right">
+            <div class="price">R$ 65,00 / diária</div>
+            <div style="font-size:12px;color:var(--muted)">Consultar disponibilidade</div>
+          </div>
+        </div>
+
+        <div class="service" data-name="Vacinação">
+          <div>
+            <strong>Aplicação de Vacinas</strong>
+            <div class="meta">Serviço realizado por profissional qualificado. Vacinas vendidas separadamente.</div>
+            <div class="meta">Tele‑busca: Não</div>
+          </div>
+          <div style="text-align:right">
+            <div class="price">R$ 40,00 (taxa de aplicação)</div>
+            <div style="font-size:12px;color:var(--muted)">Trazer carteirinha de vacinação</div>
+          </div>
+        </div>
+
+        <div class="service" data-name="Consulta Veterinária">
+          <div>
+            <strong>Consulta Veterinária</strong>
+            <div class="meta">Avaliação clínica, diagnóstico e orientação de tratamento.</div>
+            <div class="meta">Tele‑busca: Sim (somente região central)</div>
+          </div>
+          <div style="text-align:right">
+            <div class="price">R$ 120,00</div>
+            <div style="font-size:12px;color:var(--muted)">Agendamento prévio</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:30px">
+      <h2>Contato</h2>
+      <p style="color:var(--muted)">Endereço: Rua W, 123 — Bairro X, Cidade Y.<br>
+      Telefone/WhatsApp: (DD) 9 9999‑9999 — E‑mail: contato@petlindo.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div style="flex:1">
+        <strong>PetLindo</strong>
+        <div style="font-size:13px;color:#b88900;margin-top:6px">© 2025 PetLindo — Todos os direitos reservados. Desenvolvido por: Seu Nome</div>
+      </div>
+
+      <div>
+        <div><strong>Links</strong></div>
+        <div style="margin-top:8px"><a href="#produtos">Produtos</a> · <a href="#servicos">Serviços</a> · <a href="#contato">Contato</a></div>
+      </div>
+
+      <div>
+        <div><strong>Legal</strong></div>
+        <div style="font-size:13px;color:#b88900;margin-top:8px">CNPJ: 00.000.000/0001‑00<br>Termos & Privacidade</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterServices(){
+      const q = document.getElementById('serviceSearch').value.toLowerCase().trim();
+      const items = document.querySelectorAll('#servicesList .service');
+      items.forEach(it=>{
+        const name = it.getAttribute('data-name').toLowerCase();
+        const text = it.innerText.toLowerCase();
+        if(!q || name.includes(q) || text.includes(q)) it.style.display='flex'; else it.style.display='none';
+      })
+    }
+  </script>
+</body>
+</html>
+   
