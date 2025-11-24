@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PetLindo - PetShop</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { background:#f7fafc; color:#5a4300; font-family:Arial, sans-serif; }
+    header { background:#f9db4a; padding:20px; }
+    .brand-img { width:60px; height:60px; border-radius:10px; object-fit:cover; }
+    .category, .service, .form-section { background:white; padding:20px; border-radius:12px; margin-bottom:20px; }
+    .price { color:#b88600; font-weight:bold; }
+    footer { background:#efb810; padding:20px; margin-top:40px; }
+  </style>
+</head>
+
+<body>
+
+<header class="d-flex justify-content-between align-items-center">
+  <div class="d-flex align-items-center gap-3">
+    <img class="brand-img" src="https://placehold.co/100x100?text=Pet" alt="Logo do PetLindo, um pet simpático posando para foto">
+    <h2 class="m-0">PetLindo</h2>
+  </div>
+
+  <nav>
+    <a href="#produtos" class="me-3">Produtos</a>
+    <a href="#servicos" class="me-3">Serviços</a>
+    <a href="#cadastro" class="me-3">Cadastro</a>
+    <a href="#agendamento">Agendamento</a>
+  </nav>
+</header>
+
+<main class="container my-4">
+
+  <!-- Bootstrap Carousel -->
+  <div id="carouselPets" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://placehold.co/1200x300?text=Promoções+PetShop"
+             class="d-block w-100"
+             alt="Banner com promoções do PetShop">
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/1200x300?text=Banho+e+Tosa"
+             class="d-block w-100"
+             alt="Banner sobre o serviço banho e tosa">
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/1200x300?text=Produtos+para+Pets"
+             class="d-block w-100"
+             alt="Banner mostrando vários produtos de petshop">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPets" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselPets" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Produtos -->
+  <h2 id="produtos">Produtos</h2>
+
+  <div class="category">
+    <h4>Alimentação</h4>
+    <p>Ração Premium SuperDog 15kg — <span class="price">R$ 189,90</span></p>
+    <p>Ração MiaGato 5kg — <span class="price">R$ 89,50</span></p>
+  </div>
+
+  <div class="category">
+    <h4>Higiene</h4>
+    <p>Shampoo Suave 250ml — <span class="price">R$ 29,90</span></p>
+    <p>Escova PegaPelos — <span class="price">R$ 45,00</span></p>
+  </div>
+
+  <div class="category">
+    <h4>Brinquedos</h4>
+    <p>Bolinha Mordedora — <span class="price">R$ 24,90</span></p>
+    <p>Arranhador Torre — <span class="price">R$ 129,00</span></p>
+  </div>
+
+  <!-- Serviços -->
+  <h2 id="servicos">Serviços</h2>
+
+  <div class="service">
+    <h5>Banho e Tosa</h5>
+    <p>Valor: <span class="price">R$ 89,00</span> — Tele-busca: Sim</p>
+  </div>
+
+  <div class="service">
+    <h5>Hospedagem</h5>
+    <p>Valor: <span class="price">R$ 65,00/dia</span> — Tele-busca: Não</p>
+  </div>
+
+  <!-- Formulário Cadastro -->
+  <h2 id="cadastro">Cadastro do Cliente e do Pet</h2>
+
+  <form class="form-section" id="formCadastro">
+    <h4>Dados do Cliente</h4>
+
+    <label class="form-label">Nome completo</label>
+    <input type="text" class="form-control mb-3" required placeholder="Seu nome">
+
+    <label class="form-label">CPF</label>
+    <input type="text" class="form-control mb-3" required placeholder="000.000.000-00">
+
+    <label class="form-label">Sexo:</label>
+    <div class="mb-3">
+      <input type="radio" name="sexo" value="Feminino"> Feminino
+      <input type="radio" name="sexo" value="Masculino" class="ms-3"> Masculino
+    </div>
+
+    <label class="form-label">Telefone</label>
+    <input type="tel" class="form-control mb-3" required placeholder="(00) 00000-0000">
+
+    <label class="form-label">E-mail</label>
+    <input type="email" class="form-control mb-4" required placeholder="seuemail@email.com">
+
+    <h4>Dados do Pet</h4>
+
+    <label class="form-label">Nome do Pet</label>
+    <input type="text" class="form-control mb-3" required>
+
+    <label class="form-label">Raça</label>
+    <input type="text" class="form-control mb-3" required>
+
+    <label class="form-label">Idade</label>
+    <input type="number" class="form-control mb-4" min="0" required>
+
+    <button class="btn btn-warning">Enviar Cadastro</button>
+  </form>
+
+  <!-- Agendamento -->
+  <h2 id="agendamento">Agendamento</h2>
+
+  <form class="form-section" id="formAgendamento">
+
+    <label class="form-label">Escolha o serviço</label>
+    <select class="form-select mb-3" required>
+      <option value="">Selecione</option>
+      <option value="banho">Banho</option>
+      <option value="tosa">Tosa</option>
+    </select>
+
+    <label class="form-label">Forma de entrega</label>
+    <select class="form-select mb-3" required>
+      <option value="">Selecione</option>
+      <option value="tele-busca">Tele-busca</option>
+      <option value="entrega-local">Entrega no local</option>
+    </select>
+
+    <label class="form-label">Data do agendamento</label>
+    <input type="date" class="form-control mb-3" required>
+
+    <label class="form-label">Horário</label>
+    <input type="time" class="form-control mb-4" required>
+
+    <button class="btn btn-warning">Confirmar Agendamento</button>
+  </form>
+
+</main>
+
+<footer class="text-center">
+  © 2025 PetLindo — Todos os direitos reservados.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript Dinâmico -->
+<script>
+  document.getElementById('formCadastro').addEventListener('submit', function(event){
+    event.preventDefault();
+    alert("Cadastro realizado com sucesso!");
+  });
+
+  document.getElementById('formAgendamento').addEventListener('submit', function(event){
+    event.preventDefault();
+    alert("Agendamento confirmado com sucesso!");
+  });
+</script>
+
+</body>
+</html>
